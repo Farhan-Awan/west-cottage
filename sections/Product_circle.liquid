@@ -1,0 +1,93 @@
+<style>
+ .cir_pro_container
+  {
+    height: 80px;
+    margin: 2%;
+    max-width: 1600px;
+    width:90%;
+    margin: 0 auto;
+  }
+   .pro_main_layout {
+    display: flex;    
+     width:100%;
+     justify-content: space-between;
+     column-gap: 5%;
+  }
+  .west_col_1,.west_col_2 {
+   display:flex;
+    width:50%;
+    column-gap: 5%;
+  }
+  
+  .col_lnk {width: 75%; text-decoration: none;}
+  
+  .pro_img {
+    width: 45px;
+    height:45px;
+    border-radius: 50%;
+    position: absolute;
+    border: 5px solid #f9fafb;
+  }
+	.west_col_1:hover{ column-gap:8%; transition:1s;}
+  .west_col_2:hover{ column-gap:10%; transition:1s;}
+@media only screen and (max-width: 768px){
+  .pro_main_layout{width:90%;column-gap: 10%;}
+
+  
+}
+  
+</style>
+<div class="cir_pro_container">
+ <div class="wrapper">
+   <div class="pro_main_layout">
+  <div class="west_col_1">
+     <a href="#" class="col_lnk"><h3>Best Sellers </h3></a>
+     {% for product in collections[section.settings.f_col].products %}
+    <a href="{{ product.url }}" class="pro_lnk_{{forloop.index}}">
+      <div class="img_div-{{forloop.index}}"><img class="pro_img" src="{{ product.featured_image | img_url: 'large' }}" alt="no image"></div></a>
+     {% endfor %}
+  </div>
+  <div class="west_col_2">
+     <a href="#" class="col_lnk"><h3>New Arrivals </h3></a>
+     {% for product in collections[section.settings.f_col2].products %}
+     <a href="{{ product.url }}" class="pro_lnk_{{forloop.index}}">
+       <div class="img_div"><img class="pro_img" src="{{ product.featured_image | img_url: 'large' }}" alt="no image"></div></a>
+     {% endfor %}
+   </div>
+     
+ </div>
+ </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "product_circle",
+    "settings": [
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "product_circle",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}
+

@@ -1,0 +1,234 @@
+<style>
+  .slider_content_main{
+   max-width:1600px;
+    width: 100%;
+    margin: 0 auto;
+    height: 600px;
+    display:flex;
+    
+  }
+  .img_lnk{
+    max-width:100%;
+    width:40%;}
+
+  .fx_section_contain
+  {
+    max-width:100%;
+    width:60%;
+   	min-height: 450px;
+  }
+  .slick-prev:before, .slick-next:before
+  {
+    color: #000!important;
+  }
+  .fx_slideshow-abacus { text-align: center; }
+  
+  .fx_proslide
+  {
+    margin: 0 auto;
+    min-height: 380px;
+  }
+  .fx_slidelnk1 img
+  {
+    margin: 0 auto;
+  }
+  
+  .img_product_abacus img
+  {
+   	width: 220px;
+    margin: 2px 20px!important; 
+  }
+   .fx_slideshow-abacus:hover{
+  	box-shadow: 0 0 5px 2px #ccc;
+  }
+  .fx_slideshow-abacus {
+    text-align: center;
+    margin: 40px 35px;
+	}
+
+   .fx_aba_prodshadow .slick-prev
+  {
+    top: 40%!important;
+      width: 50px !important;
+    background-color: #328048 !important;
+    border-radius: 50%;
+    transition-duration: 0.8s;
+    left: 6px;
+    padding: 8px 8px 40px 6px;
+    height: 50px !important;
+    z-index: 2;
+    display:none!important;
+  }
+  
+   .fx_aba_prodshadow .slick-next
+  {
+    top: 40%!important;
+    width: 50px;
+    background-color: #328048 !important;
+    border-radius: 50%;
+    transition-duration: 0.8s;
+   	right: 25px;
+    padding: 6px 35px 12px 10px;
+    height: 50px !important;
+    display:none!important;
+  }
+	.fx_aba_prodshadow .slick-arrow{opacity: 0;}
+  
+  .fx_aba_prodshadow:hover .slick-arrow{opacity: 1.0;}
+  .fx_aba_prodshadow .slick-prev:before{font-size: 30px}
+   .fx_aba_prodshadow .slick-next:before {font-size: 30px}
+
+   @media only screen and (max-width: 768px) {
+     
+  .fx_section_contain
+  {
+   	min-height: 320px;
+    margin-bottom: 2%;
+    margin-top: 2%
+  }
+     
+  .img_product_abacus
+     {
+      	    margin-left: -30px!important; 		
+     }
+  .img_product_abacus img
+     {
+      	width: 150px; 
+       padding:0;
+     }
+	.fx_slideshow-abacus {
+ 
+    	margin: 20px 0;
+	}
+     
+   #fx_proslide
+     {
+       margin-bottom: 10%;
+     }
+     .fx_slideshow-abacus h4 { font-size: 11px;}
+   }
+  
+  
+  .fx_aba_prodshadow .slick-prev
+  {
+   	left: 10px;
+    width: 40px !important;
+    top: 90px;
+    padding:0;
+    width: 40px;
+    height: 40px !important; 
+    
+  }
+  .fx_aba_prodshadow .slick-arrow {    opacity: 1;}
+  
+  .fx_aba_prodshadow .slick-prev:before {font-size: 20px;}
+  .fx_aba_prodshadow .slick-next:before{font-size: 20px;}
+  
+  .fx_aba_prodshadow .slick-next
+  {
+    height: 40px !important; 
+    right: -10px;
+    width: 40px;
+    top: 90px;
+    padding:0;
+  }
+  
+</style>
+
+<div class="slider_content_main">
+  <div class="img_lnk">
+    <img src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/mic.jpg?v=1657221782" style="width:100%">
+  </div>
+<div class="fx_section_contain">
+  <center><h2> {{section.settings.productslide_sec_heading}} </h2>
+     </center>
+  <div id="fx_proslide1">
+ <div class="fx_wrappslide1">
+ <div class="fx_aba_prodshadow">
+ <ul class="product_slider_shadow" id="fx_slideid">
+ {% for product in collections[section.settings.duc_slide1].products %}
+ <li class="fx_slideshow-abacus">
+   <a class="fx_slidelnk1" href="{{ product.url }}" ><div class="img_product_abacus"><img src="{{ product.featured_image | img_url: 'large' }}" alt="no image"></div></a> 
+ <h4>{{ product.title }}</h4>
+ <h4>{{ product.price | money | remove: '.00' }}</h4>
+ </li>
+
+ {% endfor %} 
+ </ul>
+ </div><!-- #slideshow-container -->
+ 
+</div><!-- #slideshow -->
+
+ 
+  
+</div>
+  </div>
+  
+</div>
+    <script> 
+$(document).ready(function(){
+    $('#fx_slideid').slick({
+      vertical: true,
+  verticalSwiping: true,
+       arrows:false,
+    autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+ responsive: [
+    
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+  ]
+});
+});
+		</script>
+
+
+
+{% schema %}
+  {
+    "name": "product_slider_half",
+    "settings": [
+		{
+			"type": "text",
+			"id": "productslide_sec_heading",
+			"label": "Write section text"
+			},
+		{
+		"type": "collection",
+		"id": "duc_slide1",
+		
+		"label": "Choose collection to show on slider tab 1"
+		},
+		{
+		"type": "collection",
+		"id": "duc_slide2",
+		"label": "Choose collection to show on slider tab 2"
+		}
+],
+
+	 "presets": [
+    {
+      "name": "product_slider_half",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

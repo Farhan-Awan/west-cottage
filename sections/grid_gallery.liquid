@@ -1,0 +1,267 @@
+<style>
+  
+.vertical-imgbg
+  {
+   height: auto;
+    background-size: cover !important;
+    min-height: 490px;
+    background-repeat: no-repeat !important;
+  	background-position: center !important; 
+  }
+  .horiz_imgbg
+  {
+   height: auto;
+    background-size: cover !important;
+    min-height: 230px;
+    background-repeat: no-repeat !important;
+  	background-position: center !important; 
+  }
+  .sqr_imgbg
+  {
+    height: auto;
+    background-size: cover !important;
+    min-height: 250px;
+    background-repeat: no-repeat !important;
+  	background-position: center !important; 
+  }
+  .section_container
+  {
+   	  margin: auto;
+  display: grid;
+  max-width: 1300px;
+  min-height: 1000px;
+  grid-template-columns: 310px 1fr 1fr;
+  grid-template-rows: 0px 1fr 1fr 100px;
+  grid-gap: 1rem;
+  grid-template-areas:
+      
+      "sidebar sidebar content-1 content-1 "
+      "sidebar sidebar content-2 content-2"
+      "content-3 content-3 content-2 content-2";
+    background-color: #2196F3;
+  }
+  .verti_img {
+  grid-area: sidebar;
+}
+.horiz_img {
+  grid-area: content-1;
+}
+.squre_1 {
+  grid-area: content-2;
+}
+.squre_2 {
+  grid-area: content-3;
+}
+  
+</style>
+
+<div class="section_container">
+
+<div class="verti-slider verti-img " id="slider1">
+{% for block in section.blocks %}
+  
+  {% if block.type == 'image-vertical' %}
+    <!-- output an image with a link -->
+        
+     	<div class="item1 fx-vertical ">
+           
+            <div class="vertical-imgbg" style="background: #D7C3B4">
+              <div class="fx-catall-text"><h1 class="cat-btn">{{block.settings.title}}</h1></div>
+                <div class="cat-sub-btn">{{ block.settings.subheading }}</div>
+             </div>
+        </div>
+     
+
+ {% endif %}    
+{% endfor %}
+  </div>  
+ <div class="horiz-slider horiz_img" id="slider2">
+{% for block in section.blocks %}
+  
+  {% if block.type == 'image-Horizontal' %}
+    <!-- output an image with a link -->
+        
+     	<div class="item2  horiz_img">
+           <a class="link-bg-image"  href="#">
+            <div class="horiz_imgbg" style="background: #000 url({{ block.settings.gridimage1 | img_url : "master"}});">
+              <div class="fx-catall-text"><h1 class="cat-btn">{{block.settings.title1}}</h1></div>
+                <div class="cat-sub-btn">{{ block.settings.subheading1 }}</div>
+             </div>
+        </a>
+        </div>
+     
+
+ {% endif %}    
+{% endfor %}
+  </div>
+   <div class="squre_slider squre_1" id="slider3">
+{% for block in section.blocks %}
+  
+  {% if block.type == 'image-Square' %}
+    <!-- output an image with a link -->
+        
+     	<div class=" squre_img ">
+           <a class="link-bg-image"  href="#">
+            <div class="sqr_imgbg" style="background: #000 url({{ block.settings.gridimage2 | img_url : "master"}});">
+              <div class="fx-catall-text"><h1 class="cat-btn">{{block.settings.title1}}</h1></div>
+                <div class="cat-sub-btn">{{ block.settings.subheading1 }}</div>
+             </div>
+        </a>
+        </div>
+ {% endif %}    
+{% endfor %}
+  </div>
+     <div class="squre2_slider squre_2" id="slider4">
+{% for block in section.blocks %}
+  
+  {% if block.type == 'image-Square2' %}
+    <!-- output an image with a link -->
+        
+     	<div class="item4 squre2_img">
+           <a class="link-bg-image"  href="#">
+            <div class="sqr_imgbg" style="background: #000 url({{ block.settings.gridimage3 | img_url : "master"}});">
+              <div class="fx-catall-text"><h1 class="cat-btn">{{block.settings.title1}}</h1></div>
+                <div class="cat-sub-btn">{{ block.settings.subheading1 }}</div>
+             </div>
+        </a>
+        </div>
+ {% endif %}    
+{% endfor %}
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "grid_gallery",
+  "settings": [
+  ],
+  "blocks": [
+    {
+    "type": "image-vertical",
+    "name": "Image Grid Vertical",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url",
+    "label": "Link Here"
+    }
+    	]
+  }, 
+	 {
+    "type": "image-Horizontal",
+    "name": "Image Grid horizontal",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage1",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title1",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading1",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url1",
+    "label": "Link Here"
+    }
+    	]
+  },
+  	 {
+    "type": "image-Square",
+    "name": "Image Grid Square",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage2",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title2",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading2",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url2",
+    "label": "Link Here"
+    }
+    	]
+  },
+	 {
+    "type": "image-Square2",
+    "name": "Image Grid Square2",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage3",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title3",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading3",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url3",
+    "label": "Link Here"
+    }
+    	]
+  }
+  ],
+ "presets": [
+    {
+      "name": "grid_gallery",
+     
+         "blocks": [
+      ]
+     
+    }
+  ]
+
+
+  }
+
+{% endschema %}

@@ -1,0 +1,99 @@
+<style>
+.pro_container_lightcup
+  {
+  	height:800px;
+    max-width:1600px;
+    width:100%;
+    margin: 0 auto;
+  }
+  .pro_layout_lightcup
+  {
+   	display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap-reverse;
+  }
+  .pro_img_lightcup{
+   background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/comfort_900x_75ff5e7b-bdd7-49ed-a172-ffc97b48f7cd.webp?v=1656730133);
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    width:50%;
+    height:auto;
+  }
+  .pro_lightcup_textpart{
+   width: 50%;
+    margin: 0 auto;
+    background: #4B4B4B; 
+    height: 800px; 
+  }
+  .pro_cup{
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    align-content: center;
+  }
+  .pro_cup h3 {
+    font-size: 42px;
+    color: white;
+    font-weight: 400;
+    line-height: 44px;
+    padding-left: 5%;
+    padding-right:5%;
+    margin-bottom: 10px;
+	}
+  .pro_cup p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 28px;
+        padding-left: 10%!important;
+    padding-right:10%!important;
+  }
+</style>
+<div class="pro_container_lightcup">
+  <div class="pro_layout_lightcup">
+    
+    <div class="pro_lightcup_textpart">
+    <div class="pro_cup">
+      <h3> The same comforting and lighthearted feelings I get from West Cottage is exactly how you feel holding my pieces in your hand. </h3>
+      <div class="btn button pro_btn"> <a href="#"> View Collections </a></div>
+    </div>
+    </div>
+    <div class="pro_img_lightcup">
+      
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "light_cup",
+    "settings": [
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "light_cup",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

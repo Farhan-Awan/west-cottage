@@ -1,0 +1,197 @@
+<style>
+.item1 {
+  		grid-area: header;
+		background-position: center!important;;
+        background-size: cover!important;;
+        background-repeat: no-repeat;
+        height: 450px;
+}
+.item2 { grid-area: menu; 
+  		 height: 850px;
+  		 background: #D7C3B4;
+}
+.item3 { 
+  	grid-area: main;
+	background-position: center!important;;
+    background-size: cover!important;;
+    height: 850px;
+}
+.item4 { 
+  grid-area: right; 
+      background-size: cover!important;;
+    background-position: center!important;;
+    height: 450px;
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu menu menu header header header'
+    'menu menu menu main main main'
+    'right right right main main main ';
+  
+  max-width: 1600px;
+  width: 100%;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;  
+}
+  .text_1st_grid {display:flex; align-items:center; flex-wrap:wrap;justify-content: center;}
+  .text_1st_grid p {font-size: 16px; line-height:28px;}
+  .text_1st_grid h3 {font-size: 42px; line-height:44px;}
+  .grid_cont p {font-size:18px; line-height:24px; font-family: 'josefin Sans, sans-serif'!important; }
+  .grid_btn {width:205px!important;}
+</style>
+<div class="grid-container">
+  <div class="item1" style="background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_4799_900x_edc02fe7-b31b-4939-ad93-a6b5cc02fbbe.webp?v=1656353534);">Header <br> 
+    <div class="grid_cont">
+   <p>  COZY & COMFORTABLE</p>
+   <h3>Specially curated pieces that are most beloved by customers; like cheap influencers, these sexy little numbers sell out quickly.</h3>
+      <div class="btn button view_col grid_btn"><a href="#" class="button--secondary"> Shop the collection  </a></div>
+    </div></div>
+  <div class="item2">
+    <div class="text_1st_grid"><h3>Crowd Favourites </h3>
+      <p> Specially curated pieces that are most beloved by customers; like cheap influencers, these sexy little numbers sell out quickly.</p>
+    </div>
+  </div>
+  <div class="item3" style="background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_4953_1728x_07774f90-6e6b-4210-baa9-c01e5212d73f.webp?v=1656353534);">Main</div>  
+  <div class="item4" style="background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_4977_900x_dbe44e93-ecb6-4259-b54f-5b44428b5689.webp?v=1656353534);">Right</div>
+</div>
+
+{% schema %}
+{
+  "name": "gridsec_new",
+  "settings": [
+  ],
+  "blocks": [
+    {
+    "type": "image-vertical",
+    "name": "Image Grid Vertical",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url",
+    "label": "Link Here"
+    }
+    	]
+  }, 
+	 {
+    "type": "image-Horizontal",
+    "name": "Image Grid horizontal",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage1",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title1",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading1",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url1",
+    "label": "Link Here"
+    }
+    	]
+  },
+  	 {
+    "type": "image-Square",
+    "name": "Image Grid Square",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage2",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title2",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading2",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url2",
+    "label": "Link Here"
+    }
+    	]
+  },
+	 {
+    "type": "image-Square2",
+    "name": "Image Grid Square2",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "gridimage3",
+    "label": "Image"
+    },
+    {
+    "type": "text",
+    "id": "title3",
+    "label": "Heading",
+    "default": "Shop Now"
+    },
+    {
+    "type": "textarea",
+    "id": "subheading3",
+    "label": "Subheading",
+    "default": "Tell your brand's story through video and images"
+    },
+    {
+    "type": "url",
+    "id": "slider_url3",
+    "label": "Link Here"
+    }
+    	]
+  }
+  ],
+ "presets": [
+    {
+      "name": "gridsec_new",
+     
+         "blocks": [
+      ]
+     
+    }
+  ]
+
+
+  }
+
+{% endschema %}

@@ -1,0 +1,137 @@
+<style>
+  .product_continer_west{
+   height:630px;
+    max-width:1600px;
+    width:100%;
+    margin: 0 auto;
+  }
+  .product_continer_west h2 {font-size: 22px; line-height:32px; font-family:'PT serif, serif'; padding-left: 5.5%;
+    padding-top: 20px;margin-bottom: -10px;
+  } 
+  .pro_cuplayout{
+   display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin: 2%;
+    
+  }
+  .price_flx {
+   display: flex;
+    width:200px;
+     column-gap: 5px;
+    align-items: center;
+    margin-top: -30px;
+  }
+ 
+  .pro_tit_price {
+    display: flex;
+    align-items: center;
+    column-gap: 20%;
+	}
+  .sold_span {
+    background: #666666;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 24px;
+	}
+	.sold_pro h3 {
+    color: #4b4b4b;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+      font-family: 'PT Sans';
+	}
+  .price_flx {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  @media only screen and (max-width: 768px) {
+     .pro_cuplayout{
+       flex-wrap:wrap;
+     }
+  }
+  
+</style>
+<div class="product_continer_west">
+  <h2> Shop Mugs </h2>
+<div class="pro_cuplayout" id="pro_mugs">
+ {% for product in collections[section.settings.f_col].products %}
+  <div class="shop_mug_productx">  
+    <a class="fx_slidelnk1" href="{{ product.url }}" ><div class="img_product_abacus"><img src="{{ product.featured_image | img_url: 'large' }}" alt="no image"></div></a> 
+ 	<div class="pro_tit_price">
+      <div class="sold_pro"><h3>{{ product.title }}</h3>
+        <div class="price_flx"><span>from</span> <h3>{{ product.price | money | remove: '.00' }}</h3></div></div>
+      <span class="sold_span">Sold Out</span>
+    </div>
+ </div>
+ {% endfor %} 
+ </div>
+  <script> 
+  if (window.matchMedia("(min-width: 768px)").matches) 
+  {
+  $(document).ready(function(){
+    $('#pro_mugs').slick({
+       arrows:false,
+    autoplay: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+ responsive: [
+    
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+  ]
+});
+});
+  }
+    </script>
+</div>
+{% schema %}
+  {
+    "name": "shop_mugs_product",
+    "settings": [
+
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "shop_mugs_product",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

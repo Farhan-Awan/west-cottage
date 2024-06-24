@@ -1,0 +1,175 @@
+<style>
+  .pro_cont_container{
+    max-width: 1600px;
+    width:100%;
+    margin: 0 auto;
+    height:1298px;
+  }
+  .grid_type_layout{
+   display: flex;
+    width:100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .part_one_vertical{
+    height: 850px;
+  	background: #D7C3B4;
+    width:50%;
+  }
+  .part1_squre
+  {
+    background:grey;
+    height:450px;
+    width:50%;
+    background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_4799_900x_edc02fe7-b31b-4939-ad93-a6b5cc02fbbe.webp?v=1656353534);
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top: 30px;
+  }
+    .part2_squre
+  {
+    background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_4977_900x_dbe44e93-ecb6-4259-b54f-5b44428b5689.webp?v=1656353534);
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    height:450px;
+    width:50%;
+    padding-top: 30px;
+    padding-left: 40px;
+  }
+    .part_two_vertical{
+    background:#000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_4953_1728x_07774f90-6e6b-4210-baa9-c01e5212d73f.webp?v=1656353534);
+     background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    height: 850px;
+    width: 50%;
+    margin-top:-400px;
+      padding-left: 40px;
+    padding-top: 30px;
+  }
+	.squre_cont p{font-size:18px; line-height:24px; font-family: 'josefin Sans, sans-serif'!important; }
+  .squre_cont h3{font-size: 42px; line-height:44px; margin-top: 20px;margin-bottom: 25px;}
+  .shop_flx_btn{
+    background: #ba907d;
+    border-radius: 30px;
+    width: 195px;
+  }
+  .shop_flx_btn:hover {background: #8d6853;}
+  .shop_flx_btn a {
+  text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: 'PT Serif';
+    line-height: 48px;
+    display: flex;justify-content: center;
+  }
+  .squre_cont {text-align: left;}
+  .part_one_vertical h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 44px;
+}
+  .vertic_cont {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    height: 900px;
+	}
+
+  @media only screen and (max-width: 768px) {
+    .pro_cont_container{height:2200px;}
+  .part_one_vertical{width:100%;}
+  .part1_squre{width:100%;}
+  .part2_squre{width:100%; z-index:9;}
+    .part_two_vertical{width:100%;  margin-top: 1%;}
+  }
+</style>
+<div class="pro_cont_container">
+  <div class="grid_type_layout">
+    <div class="part_one_vertical">
+     <div class="vertic_cont"> <h3>Crowd Favourites </h3>
+      <p>Specially curated pieces that are most beloved by customers; like cheap influencers, these sexy little numbers sell out quickly. </p>
+      </div>
+    </div>
+      <div class="part1_squre">
+      <div class="squre_cont">
+        <p>COZY & COMFORTABLE</p>
+        <h3> Hygge </h3>
+      <div class="shop_flx_btn"><a href="#" class="button--secondary"> Shop the collection  </a></div>
+        </div>
+      </div>
+    
+    <div class="part2_squre">
+    <div class="squre_cont">
+        <p>EMPOWERING & CHEEKY</p>
+        <h3> Doobs </h3>
+      <div class="shop_flx_btn"><a href="#" class="button--secondary"> Shop the collection  </a></div>
+        </div>
+    </div>
+	    <div class="part_two_vertical">
+          <div class="squre_cont">
+        <p> LIMITED EDITION </p>
+        	<h3>Seasonal</h3>
+      <div class="shop_flx_btn"><a href="#" class="button--secondary"> Shop the collection  </a></div>
+        </div>
+      </div>
+  
+</div>
+</div>
+{% schema %}
+  {
+    "name": "grid_with_flx",
+    "settings": [
+			{
+			"type": "text",
+			"id": "sec_heading",
+			"label": "Write section text"
+			},
+			  {
+      "type": "select",
+      "id": "color_scheme1",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "accent-1"
+        },
+        {
+          "value": "accent-2",
+          "label": "accent-2"
+        },
+        {
+          "value": "background-1",
+          "label": "background-1"
+        },
+        {
+          "value": "background-2",
+          "label": "background-2"
+        }
+      ],
+      "default": "accent-1",
+      "label": "choose background color for logo showcase",
+      "info": "accent-1"
+      }
+],
+	 "presets": [
+    {
+      "name": "grid_with_flx",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

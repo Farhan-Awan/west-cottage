@@ -1,0 +1,112 @@
+<style>
+.pro_container_textimg
+  {
+    height: 990px;
+    max-width: 1600px;
+    width:100%;
+    margin: 0 auto;
+  }
+  .pro_layout_txtimg
+  {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-flow: nowrap;
+  }
+ .pro_textcol2 h3 {
+    font-size: 42px;
+    color: #fff;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 0px;
+  }
+.pro_textcol2 p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+        padding-left: 30px;
+    padding-right: 30px;
+    
+  }
+  .pro_textcol2 {
+    width: 40%;
+    margin: 0 auto;
+    background:#4B4B4B;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 1010px;
+  }
+  .pro_img_div img {height:1010px;}
+  .pro_imgcol
+  {
+    width: 60%;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .pro_btn {
+    background: white;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 15px 25px;
+   }
+  .pro_btn a { text-decoration: none; }
+  .pro_textcol2 div {height:400px;}
+
+  
+  @media only screen and (max-width: 768px)
+  {
+    .pro_container_textimg{height:645px;}
+    .pro_textcol2{ width:100%; height:auto!important;}
+    .pro_textcol2 h3 {font-size:20px;
+                      padding-left: 15px!important;
+                      padding-right: 15px!important;
+                      line-height: 20px;
+                     }
+    .pro_imgcol{width:100%!important;}
+    .pro_img_div img {height:auto!important}
+    
+  }
+</style>
+<div class="pro_container_textimg">
+  <div class="pro_layout_txtimg">
+    <div class="pro_textcol2">
+      <h3> I’m Elle, A Canadian single mom of 3 based outside of Toronto City. </h3>
+      <p> West Cottage Pottery is named after my Gran’s home, which I grew up viewing as sacred land. we work </p>
+    </div>
+    <div class="pro_imgcol">
+     <div class="pro_img_div"> <img src="https://cdn.shopify.com/s/files/1/0596/1898/4089/files/3rdsec_flex.webp?v=1656364506" style="width:100%;"></div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "txt_img_twocol",
+    "settings": [
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "txt_img_twocol",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

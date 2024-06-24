@@ -1,0 +1,91 @@
+<style>
+.handsgone_container
+  {
+   	height: 600px;
+    max-width: 1600px;
+    width:100%;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+  }
+  .view_col {
+    background: #ba907d;
+    border-radius: 30px;
+    width: 195px;
+    display: flex;
+    margin: 0 auto;
+	} 
+  .view_col:hover {
+    background: #8d6853;
+	} 
+  .view_col a {
+   text-decoration: none;
+    color:white;
+    font-size: 14px;
+    font-family: 'PT Serif';
+    line-height: 48px;
+  }
+  .txt_contain {width: 50%; margin: 0 auto;}
+  .txt_contain p {text-align: center; padding-top: 10%; letter-spacing: 1px;}
+  .txt_contain h3 {text-align: center;}
+  .txt_contain p {font-size: 18px;text-transform: uppercase; line-height: 24px;}
+  .txt_contain h3 {font-size: 42px; line-height: 44px;margin-top: 0px!important;}
+</style>
+  <div class="handsgone_container" style="background-image: url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/IMG_5050_0fe2e671-0960-42d3-a818-c70871ddbab6.jpg?v=1656614855)">
+ <div class="txt_layout">
+    <div class="txt_contain">
+   <p>  I believe each piece holds a story both for me the potter, and you the owner.</p>
+   <h3> My hands haven’t just been on each piece, my heart has gone into them.</h3>
+      <div class="btn button view_col"><a href="#" class="button--secondary"> View Collections  </a></div>
+    </div>
+    
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "my_hands_sec",
+    "settings": [
+			{
+			"type": "text",
+			"id": "sec_heading",
+			"label": "Write section text"
+			},
+			  {
+      "type": "select",
+      "id": "color_scheme1",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "accent-1"
+        },
+        {
+          "value": "accent-2",
+          "label": "accent-2"
+        },
+        {
+          "value": "background-1",
+          "label": "background-1"
+        },
+        {
+          "value": "background-2",
+          "label": "background-2"
+        }
+      ],
+      "default": "accent-1",
+      "label": "choose background color for logo showcase",
+      "info": "accent-1"
+      }
+],
+	 "presets": [
+    {
+      "name": "my_hands_sec",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

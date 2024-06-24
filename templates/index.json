@@ -1,0 +1,259 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "9d742d16-cc30-418b-bacd-b9a29934e822": {
+          "type": "text",
+          "settings": {
+            "text": "WEST COTTAGE",
+            "text_style": "body"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Handmade pottery with mindful slow living at the core.",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Each piece tells a story. Each piece holds a lesson.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "9d742d16-cc30-418b-bacd-b9a29934e822",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/slide-home_1512x_b9ac2b5b-2094-4c87-98d1-03e237cd6ead.webp",
+        "image_overlay_opacity": 10,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "1654827852a24d7328": {
+      "type": "two_img_pro",
+      "blocks": {
+        "00ba0b84-4485-4659-bff2-33330a774212": {
+          "type": "image",
+          "settings": {
+            "left_col": "shopify:\/\/shop_images\/collection-image-wares_900x_fc0ff7ce-ebff-488e-9048-021f19c32cab.webp",
+            "img_link": ""
+          }
+        },
+        "ef7d2255-5bef-42db-aed1-39fb336b79e4": {
+          "type": "image",
+          "settings": {
+            "left_col": "shopify:\/\/shop_images\/collection-image-wares_900x_fa26f5ad-0179-4ec4-a77b-54aee65d736e.webp",
+            "img_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "00ba0b84-4485-4659-bff2-33330a774212",
+        "ef7d2255-5bef-42db-aed1-39fb336b79e4"
+      ],
+      "settings": {
+        "sec_heading": "",
+        "color_scheme1": "accent-1"
+      }
+    },
+    "16560130542a3bc719": {
+      "type": "Product_circle",
+      "settings": {
+        "f_col": "best-sellers-west-1",
+        "f_col2": "new-arrivals-west-2"
+      }
+    },
+    "16567035193f742c19": {
+      "type": "grid_with_flx",
+      "settings": {
+        "sec_heading": "",
+        "color_scheme1": "accent-1"
+      }
+    },
+    "1656352940cd24688f": {
+      "type": "gridsec_new",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "16563588869ba231c6": {
+      "type": "vid_text_twocol",
+      "settings": {
+        "f_col": "",
+        "f_col2": ""
+      }
+    },
+    "165636315526e2f755": {
+      "type": "txt_img_twocol",
+      "settings": {
+        "f_col": "",
+        "f_col2": ""
+      }
+    },
+    "16566141798de2426e": {
+      "type": "my_hands_sec",
+      "settings": {
+        "sec_heading": "",
+        "color_scheme1": "accent-1"
+      }
+    },
+    "16566254250e98e6cb": {
+      "type": "circle_cake",
+      "settings": {
+        "sec_heading": "",
+        "color_scheme1": "accent-1"
+      }
+    },
+    "16569605459ecf5dec": {
+      "type": "nestle_roof",
+      "settings": {
+        "f_col": "",
+        "f_col2": ""
+      }
+    },
+    "1656730370c844b115": {
+      "type": "visited_west_img_txt",
+      "settings": {
+        "f_col": "",
+        "f_col2": ""
+      }
+    },
+    "16569645276e65e58f": {
+      "type": "light_cup",
+      "settings": {
+        "f_col": "",
+        "f_col2": ""
+      }
+    },
+    "1656970633105ee1f1": {
+      "type": "shop_mugs_product",
+      "disabled": true,
+      "settings": {
+        "f_col": "shop-mugs",
+        "f_col2": ""
+      }
+    },
+    "16581806388abc3a42": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Mugs",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "shop-mugs",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16569809335c6491b1": {
+      "type": "newsletter",
+      "blocks": {
+        "16569809331fed47e9-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up for our newsletter",
+            "heading_size": "h2"
+          }
+        },
+        "16569809331fed47e9-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We sell out FAST! Get 10% off your 1st purchase, advanced access to new releases and exclusive sales!<\/p>"
+          }
+        },
+        "291eb8da-87f0-4c8e-b29c-409420f9b0dc": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Handmade stoneware with mindful slow living at the core.<\/p>"
+          }
+        },
+        "16569809331fed47e9-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "16569809331fed47e9-0",
+        "16569809331fed47e9-1",
+        "291eb8da-87f0-4c8e-b29c-409420f9b0dc",
+        "16569809331fed47e9-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1657219956db3b32ae": {
+      "type": "product_slider_half",
+      "disabled": true,
+      "settings": {
+        "productslide_sec_heading": "new Product Slider",
+        "duc_slide1": "anell",
+        "duc_slide2": ""
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "1654827852a24d7328",
+    "16560130542a3bc719",
+    "16567035193f742c19",
+    "1656352940cd24688f",
+    "16563588869ba231c6",
+    "165636315526e2f755",
+    "16566141798de2426e",
+    "16566254250e98e6cb",
+    "16569605459ecf5dec",
+    "1656730370c844b115",
+    "16569645276e65e58f",
+    "1656970633105ee1f1",
+    "16581806388abc3a42",
+    "16569809335c6491b1",
+    "1657219956db3b32ae"
+  ]
+}

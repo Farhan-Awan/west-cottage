@@ -1,0 +1,87 @@
+<style>
+.pro_container_visit
+  {
+  	height:600px;
+    max-width:1600px;
+    width:100%;
+    margin: 0 auto;
+  }
+  .pro_vid_colx{
+   background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/home-our-story-2_1080x_1318f1d0-dfc4-45ee-86db-631690179810.webp?v=1656730120);
+    background-position: right!important;;
+    background-size: cover!important;;
+    background-repeat: no-repeat;
+    width:60%;
+    height:auto;
+  }
+  .tx_pro_italic {
+    font-style: italic;
+	}
+  .pro_visit_rightpart{
+   width: 40%;
+    margin: 0 auto;
+    background: #4B4B4B; 
+    height: 600px; 
+  }
+  .pro_text_visit{
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    align-content: center;
+  }
+  .pro_text_visit h3 {
+    font-size: 42px;
+    color: white;
+    font-weight: 400;
+    line-height: 44px;
+}
+</style>
+<div class="pro_container_visit">
+  <div class="pro_layout">
+    <div class="pro_vid_colx">
+      
+    </div>
+    <div class="pro_visit_rightpart">
+    <div class="pro_text_visit">
+      <h3> I visited West Cottage during a very difficult time in my life. </h3>
+      <p>Once home, I turned to pottery as a way to connect with the memories of West Cottage, clear my head, and heal my heart.</p>
+      
+      <p>It instantly felt like home…. <span class="bld_txt tx_pro_italic"> just like West Cottage. </span><br></p>
+      
+    </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "visited_west_img_txt",
+    "settings": [
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "visited_west_img_txt",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

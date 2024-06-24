@@ -1,0 +1,105 @@
+<style>
+.pro_container_vidtext
+  {
+    height: 425px;
+    margin: 0 auto;
+    max-width: 1600px;
+    width:100%;
+  }
+  .pro_layout
+  {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap:wrap;
+  }
+  .pro_vid_col {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .pro_vid_col video {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+	}
+  .pro_text_col
+  {
+    width: 40%;
+    margin: 0 auto;
+    background: #4B4B4B;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .pro_text_col h3 { color: #fff; font-size:42px; line-height:44px; margin:2px!important; padding-top:8px; }
+  .pro_btn {
+    background: white;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 15px 25px;
+   }
+  .pro_btn:hover {
+    background: #CCCCCC;
+	}
+  .pro_btn a { text-decoration: none; color: #000;}
+  .pro_text_col p {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-family: 'PT sans, sans-serif';
+    font-weight: 400;
+    line-height: 28px;
+	}
+  @media only screen and (max-width: 768px) {
+    .pro_vid_col{width:100%;}
+    .pro_text_col{width:100%; padding-bottom:20px!important;}
+  }
+</style>
+<div class="pro_container_vidtext">
+  <div class="pro_layout">
+    <div class="pro_vid_col">
+      <video autoplay="" playsinline="" loop="" muted="" src="https://cdn.shopify.com/s/files/1/0530/4595/2680/files/website-clip_pmwk3fqO.mov?v=1622224803"></video>
+    </div>
+    <div class="pro_text_col">
+      <h3> Handmade. Just for you. </h3>
+      <p>If you’re wondering why it sometimes takes a while to restock, or how we sleep at night with our price points, watch this video to see what goes into each piece and why they take so long to make.</p>
+      <p>Aside from buying unique, one-of-a-kind pieces, there’s a lot of creativity and effort that goes into turning a lump of clay into a hot piece of ass in your hands </p>
+      <span class="bld_txt"> Bonus: it’s super relaxing to watch! </span><br>
+      <div class="btn button pro_btn"><a href="#"> Watch Full Video </a></div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "vid_text_twocol",
+    "settings": [
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "vid_text_twocol",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}

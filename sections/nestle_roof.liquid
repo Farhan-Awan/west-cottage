@@ -1,0 +1,106 @@
+<style>
+.pro_container_nestleroof
+  {
+  	height:800px;
+    max-width:1600px;
+    width:100%;
+    margin: 0 auto;
+  }
+  .pro_layout_roof
+  {
+   	display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .pro_roof_img{
+   background: #000 url(https://cdn.shopify.com/s/files/1/0596/1898/4089/files/home-our-story-5_1512x_e40b1f1a-3180-4bd0-a6ba-e3991bd5518f.jpg?v=1656730134);
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    width:50%;
+    height:auto;
+  }
+  .tx_pro_italic {
+    font-style: italic;
+	}
+  .pro_roof_textpart{
+   width: 50%;
+    margin: 0 auto;
+    background: #A67961; 
+    height: 800px; 
+  }
+  ..pro_text_roof{
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 800px;
+    align-content: center;
+  }
+  .pro_text_roof {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 800px;
+	}
+  .pro_text_roof h3 {
+    font-size: 42px;
+    color: white;
+    font-weight: 400;
+    line-height: 44px;
+    padding-left: 10%;
+    padding-right:10%;
+	}
+  .pro_text_roof p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 28px;
+        padding-left: 10%;
+    padding-right:10%;
+  }
+</style>
+<div class="pro_container_nestleroof">
+  <div class="pro_layout_roof">
+    <div class="pro_roof_img">
+      
+    </div>
+    <div class="pro_roof_textpart">
+    <div class="pro_text_roof">
+      <h3> West Cottage was nestled amid a quaint thatched-roofed village. </h3>
+      <p>Being there allowed me to pause and welcome a slower pace of life.</p>
+    </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "nestle_roof",
+    "settings": [
+                  {
+                  "type": "collection",
+                  "id": "f_col",
+
+                  "label": "Choose collection to show"
+                  },
+                  {
+                  "type": "collection",
+                  "id": "f_col2",
+                  "label": "Choose collection to show  2"
+                  }
+  ],
+
+	 "presets": [
+    {
+      "name": "nestle_roof",
+      "blocks": [
+        
+      ]
+    }
+  ]
+
+
+  }
+
+{% endschema %}
